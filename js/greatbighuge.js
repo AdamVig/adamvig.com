@@ -1,4 +1,4 @@
-
+// Get height and width of element
 function getTextSize(targetElement) {
   return {
     height: targetElement.offsetHeight,
@@ -6,6 +6,7 @@ function getTextSize(targetElement) {
   };
 }
 
+// Get height and width of viewport in browser
 function getViewSize() {
   return {
     height: Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 20,
@@ -13,6 +14,7 @@ function getViewSize() {
   };
 }
 
+// Compute and change font size and line height
 function resize(targetElement, compressor) {
   var newSize = getTextSize(targetElement).width / (compressor * 10);
   targetElement.style.fontSize = newSize + "px";
@@ -28,7 +30,7 @@ function run(targetElement) {
   // Increase size of text if shorter than viewport
   while (text.height < view.height) {
 
-    compressor -= 0.001;
+    compressor -= 0.1
 
     resize(targetElement, compressor);
     text = getTextSize(targetElement);
@@ -37,7 +39,7 @@ function run(targetElement) {
   // Downsize text if taller than viewport
   while (text.height > view.height) {
 
-    compressor += 0.001;
+    compressor += 0.1;
 
     resize(targetElement, compressor);
     text = getTextSize(targetElement);
@@ -53,15 +55,19 @@ function run(targetElement) {
 }
 
 var target = document.getElementsByTagName('center')[0];
-
 run(target);
+target.focus();
 
+var guidePopup = document.getElementsByTagName('h1')[0];
 var content = target.textContent;
 var unchangedTime = 0;
 
-target.onfocus = function () {
+// Remove guide popup and default text
+target.onkeydown = function () {
   if (content == "GREAT BIG HUGE") {
     target.textContent = "";
+    content = "";
+    guidePopup.style.display = "none";
   }
 };
 
@@ -80,4 +86,15 @@ setInterval(function () {
   if (unchangedTime > 5) {
     target.blur();
   }
+
+  // Reset
+  if (unchangedTime > 5 && target.textContent == "") {
+    target.textContent = "GREAT BIG HUGE";
+  }
+
 }, 1000);
+
+// Resize text if window is resized
+window.onresize = function(event) {
+  run(target);
+};
