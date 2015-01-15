@@ -1,14 +1,10 @@
-html, body, main {
-  width: 100%;
+html, body {
   height: 100%;
-  display: block;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
 }
 center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   outline: 0;
+  text-transform: uppercase;
 }
