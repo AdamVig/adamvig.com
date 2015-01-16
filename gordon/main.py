@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/local/bin/python
 import mechanize, getpass, json, urlparse
 from bs4 import BeautifulSoup
 from collections import OrderedDict
