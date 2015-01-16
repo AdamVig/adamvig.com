@@ -1,10 +1,17 @@
 html, body {
   height: 100%;
 }
+h1, h2 {
+  margin-bottom: 0;
+}
 center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   outline: 0;
   text-transform: uppercase;
+}
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
