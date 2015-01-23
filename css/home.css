@@ -1,0 +1,86 @@
+body {
+  font-family: 'Oswald', 'Helvetica Neue', 'Helvetica', sans-serif;
+  color: #ecf0f1;
+}
+h1, h2 {
+  font-weight: 400;
+}
+h1 {
+  font-size: 85px;
+}
+h2 {
+  font-size: 45px;
+}
+p {
+  font-weight: 300;
+  font-size: 25px;
+}
+section.text-right {
+  text-align: right;
+}
+section > .column > img {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+section {
+  height: 300px;
+  padding: 15px;
+}
+section.intro-adam, section.made-app {
+  padding-bottom: 0;
+}
+section {
+  margin-bottom: 30px;
+}
+section:last-child {
+  margin-bottom: 0;
+}
+section.intro-adam {
+  background-color: #e74c3c;
+}
+section.intro-adam ul.social-icons {
+  list-style: none;
+}
+section.intro-adam ul.social-icons > li {
+  display: inline-block;
+}
+section.intro-adam ul.social-icons > li > a > img {
+  height: 90px;
+  width: 90px;
+  margin-left: -20px;
+}
+section.intro-adam .self-image > img {
+  max-width: 338px;
+  margin-left: -50px;
+}
+section.made-app {
+  background-color: #27ae60;
+}
+section.made-app .schedu-image > img {
+  max-height: 300px;
+}
+section.write-code {
+  background-color: #f39c12;
+}
+section.write-code .code-image > img {
+  margin-top: 25px;
+}
+section.mix-sound {
+  background-color: #8e44ad;
+}
+section.mix-sound .sound-image > img {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+section.attend-gordon {
+  background-color: #2980b9;
+}
+section.attend-gordon .gordon-image > img {
+  margin-top: 10px;
+}
+section.in-touch {
+  background-color: #e74c3c;
+}
+section.in-touch .phone-image > img {
+  margin-top: 70px;
+}

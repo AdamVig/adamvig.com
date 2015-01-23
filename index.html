@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/img/favicon-144.png">
 
-    <!-- Twitter Card data --> 
+    <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@MeetAdamJohn">
     <meta name="twitter:title" content="Adam Vigneaux">
@@ -21,7 +21,7 @@
     <meta name="twitter:creator" content="@MeetAdamJohn">
     <meta name="twitter:image" content=" http://adamvig.com/res/img/favicon-500.png">
 
-    <!-- Open Graph data --> 
+    <!-- Open Graph data -->
     <meta property="og:title" content="Adam Vigneaux">
     <meta property="og:type" content="website">
     <meta property="og:url" content=" http://adamvig.com">
@@ -29,40 +29,110 @@
     <meta property="og:description" content="Adam Vigneaux is really good.">
     <meta property="og:site_name" content="Adam Vigneaux">
 
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/home.css">
     <script src="/js/vendor/modernizr-2.8.0.min.js"></script>
   </head>
   <body>
-    <main>
-      <div class="container">
-        <h1>Adam Vigneaux &middot; Internet Escapades:</h1>
-        <h2>
-          <ul>
+    <main class="container">
+      <section class="intro-adam row">
+        <div class="two-thirds column">
+          <h1>Hi, I'm Adam.</h1>
+          <h2>Check me out on...</h2>
+          <ul class="social-icons">
             <li>
-              <a href="http://instagram.com/adamvigneaux">INSTAGRAM</a>
+              <a href="https://www.facebook.com/AdamVigneaux" target="_blank">
+                <img src="/img/social/facebook.svg" alt="Facebook">
+              </a>
             </li>
             <li>
-              <a href="https://twitter.com/MeetAdamJohn">TWITTER</a>
+              <a href="https://twitter.com/MeetAdamJohn" target="_blank">
+                <img src="/img/social/twitter.svg" alt="Twitter">
+              </a>
             </li>
             <li>
-              <a href="http://www.flickr.com/photos/adamvig">FLICKR</a>
+              <a href="http://instagram.com/adamvigneaux" target="_blank">
+                <img src="/img/social/instagram.svg" alt="Instagram">
+              </a>
             </li>
             <li>
-              <a href="https://plus.google.com/116852760735447913740/posts">GOOGLE+</a>
+              <a href="https://github.com/adamvig" target="_blank">
+                <img src="/img/social/github.svg" alt="Github">
+              </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/AdamVigneaux">FACEBOOK</a>
+              <a href="https://vimeo.com/adamvig" target="_blank">
+                <img src="/img/social/vimeo.svg" alt="Vimeo">
+              </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/pub/adam-vigneaux/88/885/249/">LINKEDIN</a>
+              <a href="https://www.linkedin.com/in/adamvigneaux" target="_blank">
+                <img src="/img/social/linkedin.svg" alt="LinkedIn">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.flickr.com/photos/adamvig" target="_blank">
+                <img src="/img/social/flickr.svg" alt="Flickr">
+              </a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/+AdamVigneaux/" target="_blank">
+                <img src="/img/social/googleplus.svg" alt="Google+">
+              </a>
             </li>
           </ul>
-        </h2>
-        <section class="logo">
-          <img src="/img/favicon-400.png" alt="logo">
-        </section>
-      </div>
+        </div>
+        <div class="self-image one-third column">
+          <img src="/img/home/self.png" alt="">
+        </div>
+      </section>
+      <section class="made-app text-right row">
+        <div class="schedu-image one-third column">
+          <img src="/img/home/schedu.png" alt="SchedU">
+        </div>
+        <div class="two-thirds column">
+          <h1>I made an app.</h1>
+          <p>SchedU is a personal assistant for high school students. Over 10% of students and staff at the high school it is made for open it every morning to see their schedule.</p>
+        </div>
+      </section>
+      <section class="write-code row">
+        <div class="two-thirds column">
+          <h1>I write code.</h1>
+          <p>I am experienced with JavaScript (specifically AngularJS), HTML5 and CSS3, the Ionic Framework for hybrid mobile app development, Python, and PHP.</p>
+        </div>
+        <div class="code-image one-third column">
+          <img src="/img/home/codeimage.png" alt="Programming Languages">
+        </div>
+      </section>
+      <section class="mix-sound text-right row">
+        <div class="sound-image one-third column">
+          <img src="/img/home/soundboard.jpg" alt="DigiDesign VENUE SC48">
+        </div>
+        <div class="two-thirds column">
+          <h1>I mix sound.</h1>
+          <p>I have years of experience mixing live sound. I work with Gordon College Media Services to provide audiovisual support for events on campus.</p>
+        </div>
+      </section>
+      <section class="attend-gordon row">
+        <div class="two-thirds column">
+          <h1>I attend Gordon.</h1>
+          <p>I am a freshman at Gordon College in Wenham, Massachusetts. I am pursuing a bachelor’s degree in Computer Science.</p>
+        </div>
+        <div class="gordon-image one-third column">
+          <img src="/img/home/gordonlogo.png" alt="Gordon College">
+        </div>
+      </section>
+      <section class="in-touch text-right row">
+        <div class="phone-image one-third column">
+          <img src="/img/home/phoneicon.svg" alt="Phone Icon">
+        </div>
+        <div class="two-thirds column">
+          <h1>Get in touch!</h1>
+          <p>Send an email to AdamVigneaux@gmail.com and I promise I will reply within the hour.</p>
+        </div>
+      </section>
     </main>
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
