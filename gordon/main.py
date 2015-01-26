@@ -1,4 +1,3 @@
-#!venv/bin/python2.7
 import mechanize, getpass, json, urlparse
 from bs4 import BeautifulSoup
 from collections import OrderedDict
@@ -88,13 +87,17 @@ def getDiningMenu(username, password, browser):
 
     return menu
 
-username = self.request.get("username")
-password = self.request.get("password")
+def printDiningMenu(diningMenu):
+    for dayName, dayMenu in diningMenu.iteritems():
+        print "-------------------------------"
+        print dayName, "Dinner: "
+        print dayMenu["dinner"]
+
+username = raw_input("Username:")
+password = getpass.getpass("Password:")
 
 chapelCredit = getChapelCredit(username, password, mechanize.Browser())
 diningMenu = getDiningMenu(username, password, mechanize.Browser())
 
-print json.dumps({
-    'chapelCredit': chapelCredit,
-    'diningMenu': diningMenu
-})
+printDiningMenu(diningMenu)
+print "You have", chapelCredit['credit'], "chapel credits and you need", chapelCredit['required']
