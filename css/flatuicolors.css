@@ -1,0 +1,91 @@
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header {
+  height: 8%; }
+header a,
+header .mode-select {
+  display: inline-block; }
+header .mode-select {
+  padding-top: 5px; }
+header a.site-title {
+  padding-top: 7px;
+  margin-right: 75px;
+  margin-left: 20px;
+  text-decoration: none;
+  vertical-align: bottom;
+  color: #000; }
+header a.site-title:hover {
+  color: #aaa; }
+header .site-title > h4 { margin-bottom: 0; }
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container .one-fifth.column { width: 20%; }
+button {
+  height: 23%;
+  border-radius: 0;
+  color: #fff;
+  text-align: left;
+  vertical-align: bottom;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  border: 0;
+  padding-top: 8.5%;
+  padding-left: 15px; }
+
+/* Modal
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+  padding-top: 15%;
+  color: #fff;
+  background-color: #aaa;
+}
+.overlay > .copy-info > .mobile-info,
+.overlay > .copy-info > .mac-info,
+.overlay > .copy-info > .default-info {
+  display: none; }
+
+/* Skeleton.css Overrides
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  width: 100%;
+  max-width: 100%; }
+.container .column { margin-left: 0; }
+select,
+button,
+.row { margin-bottom: 0; }
+button:hover,
+button:focus { color: #fff; }
+
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.turquoise          { background-color: rgba(26, 188, 156, 1.0);  }
+.emerald            { background-color: rgba(46, 204, 113, 1.0);  }
+.peter-river        { background-color: rgba(52, 152, 219, 1.0);  }
+.amethyst           { background-color: rgba(155, 89, 182, 1.0);  }
+.wet-asphalt        { background-color: rgba(52, 73, 94, 1.0);    }
+.green-sea          { background-color: rgba(22, 160, 133, 1.0);  }
+.nephritis          { background-color: rgba(39, 174, 96, 1.0);   }
+.belize-hole        { background-color: rgba(41, 128, 185, 1.0);  }
+.wisteria           { background-color: rgba(142, 68, 173, 1.0);  }
+.midnight-blue      { background-color: rgba(44, 62, 80, 1.0);    }
+.sun-flower         { background-color: rgba(241, 196, 15, 1.0);  }
+.carrot             { background-color: rgba(230, 126, 34, 1.0);  }
+.alizarin           { background-color: rgba(231, 76, 60, 1.0);   }
+.clouds             { background-color: rgba(236, 240, 241, 1.0); }
+.concrete           { background-color: rgba(149, 165, 166, 1.0); }
+.orange             { background-color: rgba(243, 156, 18, 1.0);  }
+.pumpkin            { background-color: rgba(211, 84, 0, 1.0);    }
+.pomegranate        { background-color: rgba(192, 57, 43, 1.0);   }
+.silver             { background-color: rgba(189, 195, 199, 1.0); }
+.asbestos           { background-color: rgba(127, 140, 141, 1.0); }
+
+button {
+  -webkit-transition: opacity .5s ease-in-out;
+          transition: opacity .5s ease-in-out; }
+button:hover { opacity: 0.7; }
