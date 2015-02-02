@@ -1,7 +1,8 @@
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
-  height: 8%; }
+  height: 8%;
+  text-align: center; }
 header a,
 header .mode-select {
   display: inline-block; }
@@ -11,6 +12,7 @@ header a.site-title {
   padding-top: 7px;
   margin-right: 75px;
   margin-left: 20px;
+  padding-left: 50px;
   text-decoration: none;
   vertical-align: bottom;
   color: #000; }
@@ -18,33 +20,68 @@ header a.site-title:hover {
   color: #aaa; }
 header .site-title > h4 { margin-bottom: 0; }
 
+/* Point when title and select break into two lines */
+@media (min-width: 500px) {
+  header a.site-title { padding-top: 15px; }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  header a.site-title {
+    padding-top: 15px;
+    padding-left: 0; }
+}
+
+/* Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html,
+body,
+main {
+  height: 100%; }
+.container .one-fifth.column { width: 100%; }
+.row { height: 23%; }
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .container .one-fifth.column { width: 20%; }
+  html,
+  body,
+  main {
+    overflow: hidden; }
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.container .one-fifth.column { width: 20%; }
 button {
-  height: 23%;
+  height: 100%;
   border-radius: 0;
   color: #fff;
   text-align: left;
   vertical-align: bottom;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: .1rem;
   border: 0;
   padding-top: 8.5%;
   padding-left: 15px; }
+.clouds { color: #aaa; }
 
-/* Modal
+/* Larger than tablet */
+@media (min-width: 750px) {
+  button { font-size: 16px; }
+}
+/* Overlay
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .overlay {
+  position: fixed;
   width: 100%;
   height: 100%;
+  padding-top: 15%;
+  z-index: 2;
   display: none;
   text-align: center;
-  padding-top: 15%;
   color: #fff;
-  background-color: #aaa;
-}
+  background-color: #aaa; }
 .overlay > .copy-info > .mobile-info,
 .overlay > .copy-info > .mac-info,
 .overlay > .copy-info > .default-info {
