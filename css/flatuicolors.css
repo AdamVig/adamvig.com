@@ -68,11 +68,14 @@ button {
   border: 0;
   padding-top: 8.5%;
   padding-left: 15px; }
-.clouds { color: #aaa; }
+button.clouds,
+button.clouds:hover,
+button.clouds:focus {
+  color: #aaa; }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-  button { font-size: 16px; }
+  button { font-size: 20px; }
 }
 /* Overlay
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
