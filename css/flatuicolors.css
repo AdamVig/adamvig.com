@@ -1,13 +1,13 @@
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
-  height: 8%;
+  height: 10%;
   text-align: center; }
 header a,
 header .mode-select {
   display: inline-block; }
 header .mode-select {
-  padding-top: 5px; }
+  margin-top: 10px; }
 header a.site-title {
   padding-top: 7px;
   margin-right: 75px;
@@ -27,6 +27,9 @@ header .site-title > h4 { margin-bottom: 0; }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+  header { height: 8%; }
+  header .mode-select {
+    margin-top: 0; }
   header a.site-title {
     padding-top: 15px;
     padding-left: 0; }
@@ -39,11 +42,12 @@ body,
 main {
   height: 100%; }
 .container .one-fifth.column { width: 100%; }
-.row { height: 23%; }
+.row { height: 11%; }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
   .container .one-fifth.column { width: 20%; }
+  .row { height: 23%; }
   html,
   body,
   main {
