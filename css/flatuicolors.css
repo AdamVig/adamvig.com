@@ -1,7 +1,7 @@
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
-  height: 10%;
+  margin-bottom: 15px;
   text-align: center; }
 header a,
 header .mode-select {
@@ -22,12 +22,12 @@ header .site-title > h4 { margin-bottom: 0; }
 
 /* Point when title and select break into two lines */
 @media (min-width: 500px) {
+  header { height: 8%; }
   header a.site-title { padding-top: 15px; }
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
-  header { height: 8%; }
   header .mode-select {
     margin-top: 0; }
   header a.site-title {
@@ -40,7 +40,7 @@ header .site-title > h4 { margin-bottom: 0; }
 html,
 body,
 main {
-  height: 100%; }
+  overflow-x: hidden; }
 .container .one-fifth.column { width: 100%; }
 .row { height: 11%; }
 
@@ -51,7 +51,8 @@ main {
   html,
   body,
   main {
-    overflow: hidden; }
+    height: 100%;
+    overflow-y: hidden; }
 }
 
 /* Buttons
