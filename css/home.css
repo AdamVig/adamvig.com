@@ -1,86 +1,190 @@
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 body {
   font-family: 'Oswald', 'Helvetica Neue', 'Helvetica', sans-serif;
-  color: #ecf0f1;
-}
-h1, h2 {
-  font-weight: 400;
-}
-h1 {
-  font-size: 85px;
-}
-h2 {
-  font-size: 45px;
-}
+  color: #ecf0f1; }
+
+h1, h2 { font-weight: 400; }
+
+h1 { font-size: 4.5rem; }
+h2 { font-size: 3rem; }
 p {
   font-weight: 300;
-  font-size: 25px;
+  font-size: 2rem; }
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  h1 { font-size: 6rem; }
+  h2 { font-size: 3.9rem; }
+  p { font-size: 2.3rem; }
 }
-section.text-right {
-  text-align: right;
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  h1 { font-size: 5.5rem; }
+  h2 { font-size: 3.9rem; }
+  p { font-size: 2.3rem; }
 }
+
+  /* Larger than tablet */
+@media (min-width: 750px) {
+  h1 { font-size: 7rem; }
+  h2 { font-size: 4.5rem; }
+  p { font-size: 2.5rem; letter-spacing: .1rem; }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  h1 { font-size: 8.5rem; }
+  h2 { font-size: 4.5rem; }
+  p { font-size: 2.75rem; letter-spacing: .15rem; }
+}
+
+
+/* Section Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Allow full width sections on mobile */
+.container {
+  width: 100%; }
+
+section {
+  height: 550px;
+  padding: 15px;
+  text-align: center; }
+section> .column { height: 50%; }
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  section { height: 300px; }
+  section> .column { height: 100%; }
+}
+
+/* Remove bottom margin on last section */
+section:last-child { margin-bottom: 0; }
+
+/* Allow images to align to bottom */
+section.intro-adam, section.made-app { padding-bottom: 0; }
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  section:nth-child(odd) { text-align: left; }
+  section:nth-child(even) { text-align: right; }
+}
+
 section > .column > img {
   max-width: 100%;
-  box-sizing: border-box;
-}
-section {
-  height: 300px;
-  padding: 15px;
-}
-section.intro-adam, section.made-app {
-  padding-bottom: 0;
-}
-section {
-  margin-bottom: 30px;
-}
-section:last-child {
-  margin-bottom: 0;
-}
+  box-sizing: border-box; }
+
+/* Section background colors */
 section.intro-adam {
-  background-color: #e74c3c;
-}
-section.intro-adam ul.social-icons {
-  list-style: none;
-}
-section.intro-adam ul.social-icons > li {
-  display: inline-block;
-}
-section.intro-adam ul.social-icons > li > a > img {
-  height: 90px;
-  width: 90px;
-  margin-left: -20px;
-}
-section.intro-adam .self-image > img {
-  max-width: 338px;
-  margin-left: -50px;
-}
+  background-color: #e74c3c; }
 section.made-app {
-  background-color: #27ae60;
-}
-section.made-app .schedu-image > img {
-  max-height: 300px;
-}
+  background-color: #27ae60; }
 section.write-code {
-  background-color: #f39c12;
-}
-section.write-code .code-image > img {
-  margin-top: 25px;
-}
+  background-color: #f39c12; }
 section.mix-sound {
-  background-color: #8e44ad;
-}
-section.mix-sound .sound-image > img {
-  margin-top: 40px;
-  margin-left: 20px;
-}
+  background-color: #8e44ad; }
 section.attend-gordon {
-  background-color: #2980b9;
-}
-section.attend-gordon .gordon-image > img {
-  margin-top: 10px;
-}
+  background-color: #2980b9; }
 section.in-touch {
-  background-color: #e74c3c;
+  background-color: #e74c3c; }
+
+/* Social Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul.social-icons {
+  width: 275px;
+  margin: 0 auto;
+  list-style: none; }
+ul.social-icons > li { display: inline-block; }
+ul.social-icons > li > a > img {
+  height: 60px;
+  width: 60px; }
+ul.social-icons > li:nth-child(4):after { content: "\A"; }
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  ul.social-icons { width: 100%; }
+  ul.social-icons > li > a > img {
+    height: 55px;
+    width: 55px;
+    margin-left: -20px; }
+  ul.social-icons > li:nth-child(4):after { display: none; }
 }
-section.in-touch .phone-image > img {
-  margin-top: 70px;
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  section.intro-adam ul.social-icons > li > a > img {
+    height: 70px;
+    width: 70px;
+    margin-left: -20px; }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  section.intro-adam ul.social-icons > li > a > img {
+    height: 90px;
+    width: 90px;
+    margin-left: -20px;}
+}
+
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+section .image-container {
+  height: 90%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;  }
+section.intro-adam .self-image > .image-container,
+section.made-app .schedu-image > .image-container {
+  height: 100%;
+  background-position: center bottom; }
+section.intro-adam .self-image > .image-container {
+  background-image: url('/img/home/self.png'); }
+section.made-app .schedu-image > .image-container {
+  background-image: url('/img/home/schedu.png');
+  background-position: center bottom; }
+section.write-code .code-image > .image-container {
+  background-image: url('/img/home/code.png'); }
+section.mix-sound .sound-image > .image-container {
+  background-image: url('/img/home/soundboard.jpg'); }
+section.attend-gordon .gordon-image > .image-container {
+  background-image: url('/img/home/gordonlogo.png'); }
+section.in-touch .phone-image > .image-container {
+  background-image: url('/img/home/phoneicon.svg');
+  background-size: auto 80%; }
+
+/* Image Left/Right Side Toggle
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Display right-side images in even rows on mobile */
+section:nth-child(even) > .left-image { display: none; }
+section:nth-child(even) > .right-image { display: block; }
+
+/* Display left-side images in odd rows on mobile */
+section:nth-child(odd) > .left-image { display: block; }
+section:nth-child(odd) > .right-image { display: none; }
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+
+  section .image-container { height: 100%; }
+
+  section.in-touch .phone-image > .image-container {
+    background-image: url('/img/home/phoneicon.svg');
+    background-size: contain; }
+
+  /* Display left-side images in even rows in grid */
+  section:nth-child(even) > .left-image { display: block; }
+  section:nth-child(even) > .right-image { display: none; }
+
+  /* Display right-side images in odd rows in grid */
+  section:nth-child(odd) > .left-image { display: none; }
+  section:nth-child(odd) > .right-image { display: block; }
+
+  /* Disable left margin on left-side text containers */
+  section:nth-child(odd) > .two-thirds.column { margin-left: 0; }
 }
