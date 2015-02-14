@@ -78,18 +78,17 @@ section > .column > img {
   box-sizing: border-box; }
 
 /* Section background colors */
-section.intro-adam {
+section.intro-adam,
+section.in-touch {
   background-color: #e74c3c; }
 section.made-app {
-  background-color: #27ae60; }
+  background-color: #25a35a; }
 section.write-code {
-  background-color: #f39c12; }
+  background-color: #f2a935; }
 section.mix-sound {
   background-color: #8e44ad; }
 section.attend-gordon {
   background-color: #2980b9; }
-section.in-touch {
-  background-color: #e74c3c; }
 
 /* Social Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
