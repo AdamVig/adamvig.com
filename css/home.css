@@ -23,14 +23,14 @@ p {
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   h1 { font-size: 5.5rem; }
-  h2 { font-size: 3.9rem; }
+  h2 { font-size: 3rem; }
   p { font-size: 2.3rem; }
 }
 
   /* Larger than tablet */
 @media (min-width: 750px) {
   h1 { font-size: 7rem; }
-  h2 { font-size: 4.5rem; }
+  h2 { font-size: 4.3rem; }
   p { font-size: 2.5rem; letter-spacing: .1rem; }
 }
 
@@ -89,6 +89,8 @@ section.mix-sound {
   background-color: #8e44ad; }
 section.attend-gordon {
   background-color: #2980b9; }
+section.make-projects {
+  background-color: #21D986; }
 
 /* Social Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -155,6 +157,38 @@ section.attend-gordon .gordon-image > .image-container {
   background-image: url('/img/home/gordonlogo.png'); }
 section.in-touch .phone-image > .image-container {
   background-image: url('/img/home/phoneicon.svg'); }
+
+/* Make Projects Image Panels
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section.make-projects .flat-ui-colors .image-container {
+  background-image: url('/img/home/flatuicolors.png'); }
+section.make-projects .great-big-huge .image-container {
+  background-image: url('/img/home/greatbighuge.png'); }
+section.make-projects .five-minutes .image-container {
+  background-image: url('/img/home/fiveminutes.png'); }
+
+section.make-projects {
+  height: 1150px; }
+
+section.make-projects .image-container { height: 250px; }
+section.make-projects .flat-ui-colors.column { margin-left: 0; }
+section.make-projects .project-pane {  }
+section.make-projects a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.4s ease-in-out;  }
+section.make-projects a.project-pane:hover {
+  background-color: rgba(50, 50, 50, 0.25); }
+
+section.make-projects .project-pane.column { height: 350px; }
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  section.make-projects { height: 400px; }
+  section.make-projects .project-pane.column { height: 70%; }
+  section.make-projects .project-pane h2 { margin-bottom: 0; }
+}
 
 /* Image Left/Right Side Toggle
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
