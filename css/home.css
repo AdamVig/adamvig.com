@@ -138,6 +138,7 @@ section .image-container {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;  }
+section .image-icon > .image-container { background-size: auto 80%; }
 section.intro-adam .self-image > .image-container,
 section.made-app .schedu-image > .image-container {
   height: 100%;
@@ -148,14 +149,13 @@ section.made-app .schedu-image > .image-container {
   background-image: url('/img/home/schedu.png');
   background-position: center bottom; }
 section.write-code .code-image > .image-container {
-  background-image: url('/img/home/code.png'); }
+  background-image: url('/img/home/code.svg'); }
 section.mix-sound .sound-image > .image-container {
   background-image: url('/img/home/soundboard.jpg'); }
 section.attend-gordon .gordon-image > .image-container {
   background-image: url('/img/home/gordonlogo.png'); }
 section.in-touch .phone-image > .image-container {
-  background-image: url('/img/home/phoneicon.svg');
-  background-size: auto 80%; }
+  background-image: url('/img/home/phoneicon.svg'); }
 
 /* Image Left/Right Side Toggle
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -173,9 +173,7 @@ section:nth-child(odd) > .right-image { display: none; }
 
   section .image-container { height: 100%; }
 
-  section.in-touch .phone-image > .image-container {
-    background-image: url('/img/home/phoneicon.svg');
-    background-size: contain; }
+  section .image-icon > .image-container { background-size: contain; }
 
   /* Display left-side images in even rows in grid */
   section:nth-child(even) > .left-image { display: block; }
