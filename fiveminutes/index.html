@@ -36,9 +36,18 @@
   <link rel="stylesheet" href="/css/fiveminutes.css">
 </head>
 <body>
+  <header>
+    <button id="start-button">Start</button>
+    <span id="timer-controls" style="display: none;">
+      <button id="restart-button">Restart</button>
+      <button id="pause-button">Pause</button>
+      <button id="stop-button">Stop</button>
+    </span>
+  </header>
   <main>
-
+    <div id="timer-display" class="timer-display"></div>
   </main>
+  <script src="/js/vendor/tock.js"></script>
   <script src="/js/fiveminutes.js"></script>
   <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
