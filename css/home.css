@@ -41,6 +41,13 @@ p {
   p { font-size: 2.75rem; letter-spacing: .15rem; }
 }
 
+.section-link {
+  color: #ccc;
+}
+.section-link:hover {
+  color: #eee;
+}
+
 
 /* Section Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -147,7 +154,7 @@ section.made-app .schedu-image > .image-container {
 section.intro-adam .self-image > .image-container {
   background-image: url('/img/home/self.png'); }
 section.made-app .schedu-image > .image-container {
-  background-image: url('/img/home/schedu.png');
+  background-image: url('/img/home/apps.png');
   background-position: center bottom; }
 section.write-code .code-image > .image-container {
   background-image: url('/img/home/code.svg'); }
