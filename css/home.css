@@ -72,7 +72,7 @@ section> .column { height: 50%; }
 section:last-child { margin-bottom: 0; }
 
 /* Allow images to align to bottom */
-section.intro-adam, section.made-app { padding-bottom: 0; }
+section.intro-adam, section.make-apps { padding-bottom: 0; }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
@@ -88,7 +88,7 @@ section > .column > img {
 section.intro-adam,
 section.in-touch {
   background-color: #e74c3c; }
-section.made-app {
+section.make-apps {
   background-color: #25a35a; }
 section.write-code {
   background-color: #f2a935; }
@@ -151,12 +151,12 @@ section .iframe-container iframe {
   background-position: center center;  }
 section .image-icon > .image-container { background-size: auto 80%; }
 section.intro-adam .self-image > .image-container,
-section.made-app .schedu-image > .image-container {
+section.make-apps .schedu-image > .image-container {
   height: 100%;
   background-position: center bottom; }
 section.intro-adam .self-image > .image-container {
   background-image: url('/img/home/self.png'); }
-section.made-app .schedu-image > .image-container {
+section.make-apps .schedu-image > .image-container {
   background-image: url('/img/home/apps.png');
   background-position: center bottom; }
 section.write-code .code-image > .image-container {
