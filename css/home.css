@@ -98,6 +98,8 @@ section.attend-gordon {
   background-color: #2980b9; }
 section.make-projects {
   background-color: #21D986; }
+section.produce-videos {
+  background-color: #1ab7ea; }
 
 /* Social Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -140,7 +142,8 @@ ul.social-icons > li:nth-child(4):after { content: "\A"; }
 /* Images
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-section .image-container {
+section .image-container,
+section .iframe-container iframe {
   height: 90%;
   width: 100%;
   background-size: contain;
@@ -165,6 +168,28 @@ section.attend-gordon .gordon-image > .image-container {
 section.in-touch .phone-image > .image-container {
   background-image: url('/img/home/phoneicon.svg'); }
 
+/* General Display Panes Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section.display-panes { height: 1150px; }
+section.display-panes .display-pane-container { height: 250px; }
+section.display-panes .column:first-of-type { margin-left: 0; }
+section.display-panes a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.4s ease-in-out;  }
+section.display-panes .display-pane.column { height: 350px; }
+section.display-panes a.display-pane:hover {
+  background-color: rgba(50, 50, 50, 0.25); }
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  section.display-panes { height: 400px; }
+  section.display-panes .display-pane.column { height: 70%; }
+  section.display-panes .display-pane h2 { margin-bottom: 0; }
+}
+
+
 /* Make Projects Image Panels
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 section.make-projects .flat-ui-colors .image-container {
@@ -173,29 +198,6 @@ section.make-projects .great-big-huge .image-container {
   background-image: url('/img/home/greatbighuge.png'); }
 section.make-projects .five-minutes .image-container {
   background-image: url('/img/home/fiveminutes.png'); }
-
-section.make-projects {
-  height: 1150px; }
-
-section.make-projects .image-container { height: 250px; }
-section.make-projects .flat-ui-colors.column { margin-left: 0; }
-section.make-projects .project-pane {  }
-section.make-projects a {
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  transition: background-color 0.4s ease-in-out;  }
-section.make-projects a.project-pane:hover {
-  background-color: rgba(50, 50, 50, 0.25); }
-
-section.make-projects .project-pane.column { height: 350px; }
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-  section.make-projects { height: 400px; }
-  section.make-projects .project-pane.column { height: 70%; }
-  section.make-projects .project-pane h2 { margin-bottom: 0; }
-}
 
 /* Image Left/Right Side Toggle
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
