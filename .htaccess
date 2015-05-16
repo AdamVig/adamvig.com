@@ -9,7 +9,9 @@ RewriteRule ^(.*)$ $1.gz [L]
   ExpiresByType image/jpeg "access 1 week"
   ExpiresByType image/gif "access 1 week"
   ExpiresByType image/png "access 1 week"
+  ExpiresByType image/svg+xml "access 1 week"
   ExpiresByType text/css "access 1 week"
-  ExpiresByType text/x-javascript "access 1 week"
+  ExpiresByType text/javascript "access 1 week"
+  ExpiresByType application/javascript "access 1 week"
   ExpiresDefault "access 2 days"
 </IfModule>
