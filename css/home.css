@@ -141,7 +141,6 @@ ul.social-icons > li:nth-child(4):after { content: "\A"; }
 
 /* Images
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 section .image-container,
 section .iframe-container iframe {
   height: 90%;
@@ -155,7 +154,7 @@ section.make-apps .schedu-image > .image-container {
   height: 100%;
   background-position: center bottom; }
 section.intro-adam .self-image > .image-container {
-  background-image: url('/img/home/self.png'); }
+  background-image: url('/img/home/self.jpg'); }
 section.make-apps .schedu-image > .image-container {
   background-image: url('/img/home/apps.png');
   background-position: center bottom; }
@@ -164,7 +163,7 @@ section.write-code .code-image > .image-container {
 section.mix-sound .sound-image > .image-container {
   background-image: url('/img/home/soundboard.jpg'); }
 section.attend-gordon .gordon-image > .image-container {
-  background-image: url('/img/home/gordonlogo.png'); }
+  background-image: url('/img/home/gordonlogo.jpg'); }
 section.in-touch .phone-image > .image-container {
   background-image: url('/img/home/phoneicon.svg'); }
 
