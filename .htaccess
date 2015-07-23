@@ -15,3 +15,7 @@ RewriteRule ^(.*)$ $1.gz [L]
   ExpiresByType application/javascript "access 1 week"
   ExpiresDefault "access 2 days"
 </IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/text text/html text/plain image/svg+xml text/css application/x-javascript application/javascript
+</IfModule>
