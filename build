@@ -1,0 +1,3 @@
+#!/bin/bash
+
+uglify -c -s ./css/normalize.css ./css/skeleton.css ./css/animations.css ./css/home.css -o ./home.min.css
