@@ -167,30 +167,36 @@
       </section>
       <section class="produce-videos display-panes row" id="produce-videos">
         <h1>I produce videos.</h1>
-        <a href="//vimeo.com/adamvig/nightdrumsbennettemery"
-          target="_blank"
-          class="display-pane one-third column">
-          <h2>Night Drums</h2>
-          <div class="iframe-container display-pane-container">
-            <iframe src="https://player.vimeo.com/video/133919630?byline=0&title=0&color=fff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div class="night-drums display-pane one-third column">
+          <a href="//vimeo.com/adamvig/nightdrumsbennettemery"
+             target="_blank">
+            <h2>Night Drums</h2>
+          </a>
+          <div class="iframe-container display-pane-container" data-video="133919630" onclick="insertiFrame(this)">
+            <div class="image-container"></div>
+            <div class="play-button"></div>
           </div>
-        </a>
-        <a href="//vimeo.com/adamvig/gracebaptistvbs2014"
-          target="_blank"
-          class="display-pane one-third column">
-          <h2>VBS 2014</h2>
-          <div class="iframe-container display-pane-container">
-            <iframe src="https://player.vimeo.com/video/102954465?byline=0&title=0&color=fff" width="275" height="154" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div class="vbs-2014 display-pane one-third column">
+          <a href="//vimeo.com/adamvig/gracebaptistvbs2014"
+             target="_blank">
+            <h2>VBS 2014</h2>
+          </a>
+          <div class="iframe-container display-pane-container" data-video="102954465" onclick="insertiFrame(this)">
+            <div class="image-container"></div>
+            <div class="play-button"></div>
           </div>
-        </a>
-        <a href="//vimeo.com/adamvig/greatraceapplication"
-          target="_blank"
-          class="display-pane one-third column">
-          <h2>Great Race</h2>
-          <div class="iframe-container display-pane-container">
-            <iframe src="https://player.vimeo.com/video/121213128?byline=0&title=0&color=fff" width="275" height="154" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div class="great-race display-pane one-third column">
+          <a href="//vimeo.com/adamvig/greatraceapplication"
+            target="_blank">
+            <h2>Great Race</h2>
+          </a>
+          <div class="iframe-container display-pane-container" data-video="121213128" onclick="insertiFrame(this)">
+            <div class="image-container"></div>
+            <div class="play-button"></div>
           </div>
-        </a>
+        </div>
       </section>
       <section class="in-touch row" id="in-touch">
         <div class="phone-image image-icon left-image one-third column">
@@ -205,6 +211,31 @@
         </div>
       </section>
     </main>
+    <script>
+      var videoSource = '<iframe src="https://player.vimeo.com/video/%s?byline=0&title=0&color=fff&api=1&autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+      function insertiFrame(container) {
+
+        var videoContainer = document.createElement('div');
+
+        // Remove placeholder content
+        while (container.firstChild) {
+          container.removeChild(container.firstChild);
+        }
+
+        videoContainer.innerHTML = videoSource.replace("%s", container.dataset.video);
+        container.appendChild(videoContainer.firstChild);
+      }
+
+      function eventFire(el, etype){
+        if (el.fireEvent) {
+          el.fireEvent('on' + etype);
+        } else {
+          var evObj = document.createEvent('Events');
+          evObj.initEvent(etype, true, false);
+          el.dispatchEvent(evObj);
+        }
+      }
+    </script>
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

@@ -239,8 +239,11 @@ section.display-panes a {
   color: #fff;
   transition: background-color 0.4s ease-in-out;  }
 section.display-panes .display-pane.column { height: 350px; }
-section.display-panes a.display-pane:hover {
+section.display-panes .display-pane:hover {
   background-color: rgba(50, 50, 50, 0.25); }
+section.display-panes .display-pane {
+  transition: background-color 500ms ease-out;
+}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
@@ -248,7 +251,6 @@ section.display-panes a.display-pane:hover {
   section.display-panes .display-pane.column { height: 70%; }
   section.display-panes .display-pane h2 { margin-bottom: 0; }
 }
-
 
 /* Make Projects Image Panels
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -258,6 +260,48 @@ section.make-projects .great-big-huge .image-container {
   background-image: url('/img/home/greatbighuge.png'); }
 section.make-projects .five-minutes .image-container {
   background-image: url('/img/home/fiveminutes.png'); }
+
+/* Produce Videos Image Panels
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section.produce-videos .night-drums .image-container {
+  background-image: url('/img/home/nightdrums.jpg'); }
+section.produce-videos .vbs-2014 .image-container {
+  background-image: url('/img/home/vbs2014.jpg'); }
+section.produce-videos .great-race .image-container {
+  background-image: url('/img/home/greatrace.jpg'); }
+
+/* Video Play Button: http://jsfiddle.net/benfosterdev/bx2Zy/
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section .iframe-container {
+  position: relative;
+  cursor: pointer; }
+.play-button {
+  top: 50%;
+  margin-top: -20px;
+  left: 50%;
+  margin-left: -32.5px;
+  height: 40px;
+  width: 65px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: absolute;
+}
+
+.play-button:hover {
+  background-color: rgba(0, 173, 239, 0.9);
+}
+
+.play-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10.5px;
+  left: 24px;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 9.5px 0 9.5px 17px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+}
 
 /* Image Left/Right Side Toggle
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
