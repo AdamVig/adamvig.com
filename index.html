@@ -222,16 +222,6 @@
         videoContainer.innerHTML = videoSource.replace("%s", container.dataset.video);
         container.appendChild(videoContainer.firstChild);
       }
-
-      function eventFire(el, etype){
-        if (el.fireEvent) {
-          el.fireEvent('on' + etype);
-        } else {
-          var evObj = document.createEvent('Events');
-          evObj.initEvent(etype, true, false);
-          el.dispatchEvent(evObj);
-        }
-      }
     </script>
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
