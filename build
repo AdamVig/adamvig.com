@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cat ./css/normalize.css ./css/skeleton.css ./css/animations.css ./css/home.css > ./css/home.cat.css
-uglify -c -s ./css/home.cat.css -o ./css/home.min.css
