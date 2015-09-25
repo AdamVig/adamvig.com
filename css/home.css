@@ -187,7 +187,14 @@ ul.social-icons > li:nth-child(4):after { content: "\A"; }
   height: 5px;
   display: none;
 }
-.social-icons li:hover .social-label { display: block; }
+/* Display tooltips on hover on computer */
+@media screen {
+  .social-icons li:hover .social-label { display: block; }
+}
+/* Always display tooltips on mobile device */
+@media handheld {
+  .social-icons li .social-label { display: block; }
+}
 
 /* Images
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
