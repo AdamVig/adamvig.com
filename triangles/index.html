@@ -41,7 +41,12 @@
             overflow: hidden;
         }
         canvas {
-            animation: fadeIn 500ms ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .add {
+            animation: fadeIn 100ms ease-in-out;
         }
         .remove {
             animation: fadeOut 500ms ease-in-out;
@@ -51,7 +56,6 @@
             from { opacity: 0; }
         }
         @keyframes fadeOut {
-            from { opacity: 1; }
             to { opacity: 0; }
         }
     </style>
@@ -71,13 +75,18 @@
             };
             var newPattern = Trianglify(config).canvas();
             newPattern.id = patternID;
+            newPattern.style.zIndex = 0;
             var oldPattern = document.getElementById(patternID);
             if (oldPattern) {
-                oldPattern.className += 'remove';
+                oldPattern.className = 'remove';
+                content.appendChild(newPattern);
                 setTimeout(function () {
-                    content.replaceChild(newPattern, oldPattern);
+                    content.removeChild(oldPattern);
+                    newPattern.style.zIndex = 1;
                 }, removeTimeMs);
             } else {
+                newPattern.style.zIndex = 1;
+                newPattern.className = 'add';
                 content.appendChild(newPattern);
             }
         };
