@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Triangles | Adam Vigneaux</title>
+    <meta name="description" content="Adam Vigneaux likes to make triangles.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon-152.png">
+    <link rel="icon" href="/img/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/img/favicon-192.png" sizes="192x192">
+    <meta name="theme-color" content="#FF5F4F">
+
+    <!-- Microsoft Tile data -->
+    <meta name="msapplication-TileColor" content="#FF5F4F">
+    <meta name="msapplication-TileImage" content="/img/favicon-144.png">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@MeetAdamJohn">
+    <meta name="twitter:title" content="Triangles | Adam Vigneaux">
+    <meta name="twitter:description" content="Adam Vigneaux likes to make triangles.">
+    <meta name="twitter:creator" content="@MeetAdamJohn">
+    <meta name="twitter:image" content=" http://adamvig.com/res/img/favicon-500.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Triangles | Adam Vigneaux">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content=" http://adamvig.com">
+    <meta property="og:image" content=" http://adamvig.com/img/favicon-250.png">
+    <meta property="og:description" content="Adam Vigneaux likes to make triangles.">
+    <meta property="og:site_name" content="Adam Vigneaux">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #aaa;
+            overflow: hidden;
+        }
+        canvas {
+            animation: fadeIn 500ms ease-in-out;
+        }
+        .remove {
+            animation: fadeOut 500ms ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <main id="content"></main>
+    <script src="/js/vendor/trianglify.min.js"></script>
+    <script>
+        var refreshIntervalMs = 10000;
+        var removeTimeMs = 500;
+        var patternID = 'triangles';
+        var content = document.getElementById('content');
+        var makePattern = function () {
+            var config = {
+                height: window.innerHeight,
+                width: window.innerWidth
+            };
+            var newPattern = Trianglify(config).canvas();
+            newPattern.id = patternID;
+            var oldPattern = document.getElementById(patternID);
+            if (oldPattern) {
+                oldPattern.className += 'remove';
+                setTimeout(function () {
+                    content.replaceChild(newPattern, oldPattern);
+                }, removeTimeMs);
+            } else {
+                content.appendChild(newPattern);
+            }
+        };
+        makePattern();
+        window.addEventListener("resize", makePattern);
+        window.setInterval(makePattern, refreshIntervalMs);
+    </script>
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-57311850-1','auto');ga('send','pageview');
+    </script>
+</body>
+
+</html>
