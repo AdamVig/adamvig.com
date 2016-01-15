@@ -1,0 +1,26 @@
+{
+  "name": "adamvig.com",
+  "version": "1.0.0",
+  "description": "Personal website for AdamVig.",
+  "dependencies": {
+    "trianglify": "0.4.0"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-concat": "2.6.0",
+    "gulp-minify-css": "1.2.1",
+    "gulp-uglify": "1.4.1",
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamVig/AdamVig.com.git"
+  },
+  "author": "Adam Vigneaux",
+  "bugs": {
+    "url": "https://github.com/AdamVig/AdamVig.com/issues"
+  },
+  "homepage": "https://github.com/AdamVig/AdamVig.com#readme"
+}
