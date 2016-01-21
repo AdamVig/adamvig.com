@@ -35,21 +35,51 @@
     <meta property="og:site_name" content="Adam Vigneaux">
 
     <style>
+        html,
+        body,
+        main {
+            height: 100%;
+        }
         body {
             margin: 0;
             background-color: #aaa;
             overflow: hidden;
         }
+        header,
+        section {
+            z-index: 2;
+        }
+        header,
         canvas {
             position: absolute;
             top: 0;
             left: 0;
+        }
+        main {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .clock-icon {
+            height: 25px;
+            margin: 10px;
+        }
+        #clock {
+            display: flex;
+            font-size: 15vw;
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
+            color: white;
+            text-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
         }
         .add {
             animation: fadeIn 100ms ease-in-out;
         }
         .remove {
             animation: fadeOut 500ms ease-in-out;
+        }
+        .hidden {
+            opacity: 0;
         }
 
         @keyframes fadeIn {
@@ -61,7 +91,14 @@
     </style>
 </head>
 <body>
-    <main id="content"></main>
+    <header id="controls">
+        <div id="show-clock">
+            <img class="clock-icon" src="/img/triangles/clock.svg" alt="Show Clock">
+        </div>
+    </header>
+    <main id="content">
+        <section id="clock" class="hidden"></section>
+    </main>
     <script src="/js/vendor/trianglify.min.js"></script>
     <script>
         var refreshIntervalMs = 10000;
@@ -93,6 +130,48 @@
         makePattern();
         window.addEventListener("resize", makePattern);
         window.setInterval(makePattern, refreshIntervalMs);
+
+        var clock = document.getElementById("clock");
+
+        function checkTime(i) {
+            if (i < 10) i = "0" + i;  // add zero in front of numbers < 10
+            return i;
+        }
+
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+
+            // Convert to twelve-hour time
+            if (h > 12) {
+                h -= 12;
+            } else if (h == 0) {
+                h = 12;
+            }
+
+            var m = today.getMinutes();
+
+            // Pad with zero if less than ten
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            document.getElementById("clock").innerHTML = h + ":" + m;
+            var t = setTimeout(startTime, 1000);
+        }
+
+        document.getElementById("show-clock")
+            .addEventListener("click", function () {
+            if (clock.className == "add") {
+                clock.className = "remove";
+                setTimeout(function () {
+                    clock.className = "hidden";
+                }, removeTimeMs - 10);
+            } else {
+                clock.className = "add";
+                startTime();
+            }
+        });
     </script>
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
