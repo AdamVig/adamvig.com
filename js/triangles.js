@@ -54,18 +54,42 @@ function startTime() {
     }
 
     document.getElementById("clock").innerHTML = h + ":" + m;
-    var t = setTimeout(startTime, 1000);
+    setTimeout(startTime, 1000);
+}
+
+startTime();
+
+function toggleVisibility(id) {
+    var element = document.getElementById(id);
+    if (element.className == "add") {
+        element.className = "remove";
+        setTimeout(function () {
+            element.className = "hidden";
+        }, removeTimeMs - 10);
+    } else {
+        element.className = "add";
+    }
 }
 
 document.getElementById("show-clock")
-    .addEventListener("click", function () {
-    if (clock.className == "add") {
-        clock.className = "remove";
-        setTimeout(function () {
-            clock.className = "hidden";
-        }, removeTimeMs - 10);
-    } else {
-        clock.className = "add";
-        startTime();
-    }
-});
+    .addEventListener("click", function () { toggleVisibility("clock"); });
+document.getElementById("show-temperature")
+    .addEventListener("click", function () { toggleVisibility("temperature"); });
+
+var temperatureRefreshMs = 30 * 60 * 60; // 30 minutes
+var url = "https://api.forecast.io/forecast/36e1f2fb4fbe2b7174ba570ea81b89d2/42.5883687,-70.8223791";
+
+function getTemperature() {
+    var url = "https://api.adamvig.com/gocostudent/2.5/temperature?username=a&password=YQ==";
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            document.getElementById("temperature").innerHTML = JSON.parse(xmlHttp.responseText).data + "°F";
+        }
+    };
+    xmlHttp.open("GET", url, true); // true for asynchronous
+    xmlHttp.send(null);
+}
+
+getTemperature();
+setInterval(getTemperature, temperatureRefreshMs);
