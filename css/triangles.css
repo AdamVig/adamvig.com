@@ -12,34 +12,10 @@ body {
     text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px,
                  rgba(0, 0, 0, 0.5) -1px -1px 10px;
 }
-header,
-section {
-    z-index: 2;
-}
-header,
 canvas {
     position: absolute;
     top: 0;
     left: 0;
-}
-main {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.icon {
-    height: 25px;
-    margin: 10px;
-}
-#clock {
-    font-size: 15vw;
-}
-#temperature {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    font-size: 2.5vw;
 }
 .add {
     animation: fadeIn 100ms ease-in-out;
