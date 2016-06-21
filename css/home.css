@@ -261,12 +261,12 @@ section.make-projects .five-minutes .image-container {
 
 /* Produce Videos Image Panels
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-section.produce-videos .night-drums .image-container {
-  background-image: url('/img/home/nightdrums.jpg'); }
-section.produce-videos .vbs-2015 .image-container {
-  background-image: url('/img/home/vbs2015.jpg'); }
+section.produce-videos .broken-laptop .image-container {
+  background-image: url('/img/home/brokenlaptop.jpg'); }
 section.produce-videos .goco-ad .image-container {
   background-image: url('/img/home/gocoad.jpg'); }
+section.produce-videos .alex-goose .image-container {
+  background-image: url('/img/home/alexgoose.jpg'); }
 
 /* Video Play Button: http://jsfiddle.net/benfosterdev/bx2Zy/
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
