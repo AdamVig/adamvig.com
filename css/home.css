@@ -98,10 +98,20 @@ section:last-child { margin-bottom: 0; }
 /* Allow images to align to bottom */
 section.intro-adam, section.make-apps { padding-bottom: 0; }
 
+/* Center bottom section vertically */
+section.in-touch { line-height: 550px; }
+@media (min-width: 550px) {
+  section.in-touch { line-height: 300px; }
+}
+section.in-touch > .text-container {
+  display: inline-block;
+  vertical-align: middle; }
+
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   section:nth-child(odd) { text-align: left; }
-  section:nth-child(even) { text-align: right; }
+  /* Exclude bottom section */
+  section:nth-child(even):not(:last-child) { text-align: right; }
 }
 
 section > .column > img {
@@ -223,8 +233,6 @@ section.mix-sound .sound-image > .image-container {
   background-image: url('/img/home/soundboard.jpg'); }
 section.attend-gordon .gordon-image > .image-container {
   background-image: url('/img/home/gordonlogo.jpg'); }
-section.in-touch .phone-image > .image-container {
-  background-image: url('/img/home/phoneicon.svg'); }
 
 /* General Display Panes Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
