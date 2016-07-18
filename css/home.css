@@ -66,11 +66,9 @@ p {
 }
 
 .section-link {
-  color: #ccc;
-}
+  color: #eee; }
 .section-link:hover {
-  color: #eee;
-}
+  color: #aaa; }
 
 
 /* Section Base Styles
