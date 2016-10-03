@@ -33,12 +33,7 @@
     <meta property="og:description" content="Adam Vigneaux is a student and programmer living in Massachusetts.">
     <meta property="og:site_name" content="Adam Vigneaux">
 
-    <style type="text/css">
-      body,h1,h2{font-weight:400}img{border:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:62.5%}body{margin:0;line-height:1.6;font-size:1.5em;font-family:Oswald,'Helvetica Neue',Helvetica,sans-serif;color:#ecf0f1}main,section{display:block}a{background:0 0;color:#1EAEDB}h1{margin:.67em 0;line-height:1.2;font-size:4.5rem}.container{position:relative;max-width:960px;margin:0 auto;padding:0;width:100%}h1,h2,ul{margin-top:0}.row,h1,h2{margin-bottom:2rem}ul{list-style:circle inside;padding-left:0;margin-bottom:2.5rem}.container .column{float:left;width:100%;box-sizing:border-box}.row .column:first-child{margin-left:0}h1,h2{letter-spacing:-.1rem}h2{line-height:1.25;font-size:3rem}li{margin-bottom:1rem}.container:after,.row:after{content:"";display:table;clear:both}@font-face{font-family:Oswald;src:url(/fonts/oswald-light-webfont.eot);src:url(/fonts/oswald-light-webfont.eot?#iefix) format('embedded-opentype'),url(/fonts/oswald-light-webfont.woff2) format('woff2'),url(/fonts/oswald-light-webfont.woff) format('woff'),url(/fonts/oswald-light-webfont.ttf) format('truetype'),url(/fonts/oswald-light-webfont.svg#Oswald) format('svg');font-weight:300}@font-face{font-family:Oswald;src:url(/fonts/oswald-regular-webfont.eot);src:url(/fonts/oswald-regular-webfont.eot?#iefix) format('embedded-opentype'),url(/fonts/oswald-regular-webfont.woff2) format('woff2'),url(/fonts/oswald-regular-webfont.woff) format('woff'),url(/fonts/oswald-regular-webfont.ttf) format('truetype'),url(/fonts/oswald-regular-webfont.svg#Oswald) format('svg');font-weight:400}section{height:550px;padding:15px;text-align:center}section>.column{height:50%}section.intro-adam{padding-bottom:0;background-color:#e74c3c}ul.social-icons{width:275px;margin:0 auto;list-style:none}ul.social-icons>li{display:inline-block}ul.social-icons>li>a>img{height:60px;width:60px}ul.social-icons>li:nth-child(4):after{content:"\A"}.social-icons li .social-label{height:5px;display:none}@media handheld{.social-icons li .social-label{display:block}}section .image-container{height:90%;width:100%;background-size:contain;background-repeat:no-repeat;background-position:center center}section .image-icon>.image-container{background-size:auto 80%}section.intro-adam .self-image>.image-container,section.make-apps .schedu-image>.image-container{height:100%;background-position:center bottom}section.intro-adam .self-image>.image-container{background-image:url(/img/home/self.jpg)}section.make-apps .schedu-image>.image-container{background-image:url(/img/home/apps.png);background-position:center bottom}section.write-code .code-image>.image-container{background-image:url(/img/home/code.svg)}section.attend-gordon .gordon-image>.image-container{background-image:url(/img/home/gordonlogo.jpg)}section:nth-child(even)>.left-image,section:nth-child(odd)>.right-image{display:none}
-    </style>
-    <link rel="preload" href="/css/home.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/home.min.css"></noscript>
-    <script>!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
+    <link rel="stylesheet" href="/css/home.min.css">
   </head>
   <body>
     <main class="container">
@@ -148,7 +143,8 @@
       <section class="produce-videos display-panes row" id="produce-videos">
         <h1>I produce videos.</h1>
         <div class="broken-laptop display-pane one-third column">
-          <a href="//vimeo.com/adamvig/projectbrokenlaptop" target="_blank">
+          <a href="//vimeo.com/adamvig/projectbrokenlaptop"
+             target="_blank">
             <h2>Broken Laptop</h2>
           </a>
           <div class="iframe-container display-pane-container" data-video="160554538" onclick="insertiFrame(this)">
@@ -157,7 +153,8 @@
           </div>
         </div>
         <div class="goco-ad display-pane one-third column">
-          <a href="//vimeo.com/adamvig/gocoad" target="_blank">
+          <a href="//vimeo.com/adamvig/gocoad"
+            target="_blank">
             <h2>GoCo Student</h2>
           </a>
           <div class="iframe-container display-pane-container" data-video="143074058" onclick="insertiFrame(this)">
@@ -166,7 +163,8 @@
           </div>
         </div>
         <div class="alex-goose display-pane one-third column">
-          <a href="//vimeo.com/adamvig/alexgoose" target="_blank">
+          <a href="//vimeo.com/adamvig/alexgoose"
+             target="_blank">
             <h2>A Love Story</h2>
           </a>
           <div class="iframe-container display-pane-container" data-video="167356253" onclick="insertiFrame(this)">
@@ -177,15 +175,21 @@
       </section>
       <section class="make-projects display-panes row" id="make-projects">
         <h1>I make projects.</h1>
-        <a href="/flatuicolors" target="_blank" class="flat-ui-colors display-pane one-third column">
+        <a href="/flatuicolors"
+          target="_blank"
+          class="flat-ui-colors display-pane one-third column">
           <h2>Flat UI Colors</h2>
           <div class="image-container display-pane-container"></div>
         </a>
-        <a href="/greatbighuge" target="_blank" class="great-big-huge display-pane one-third column">
+        <a href="/greatbighuge"
+          target="_blank"
+          class="great-big-huge display-pane one-third column">
           <h2>GREATBIGHUGE</h2>
           <div class="image-container display-pane-container"></div>
         </a>
-        <a href="/fiveminutes" target="_blank" class="five-minutes display-pane one-third column">
+        <a href="/fiveminutes"
+          target="_blank"
+          class="five-minutes display-pane one-third column">
           <h2>Five Minutes</h2>
           <div class="image-container display-pane-container"></div>
         </a>
