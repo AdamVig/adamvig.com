@@ -4,23 +4,21 @@ const API_KEY = 'AIzaSyBYXTZiZYAel3Z1_cw11_s_c88_3pH_ZZ0'
 const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest']
 const CALENDAR_ID = 'adamvigneaux@gmail.com'
 
-const countdown = document.getElementById('countdown')
+const countdownElement = document.getElementById('countdown')
 const countdownTime = document.getElementById('countdown-time')
-const loader = document.getElementById('loader')
+const loaderElement = document.getElementById('loader')
 const yesElement = document.getElementById('yes')
 const noElement = document.getElementById('no')
 const howLongElement = document.getElementById('how-long')
 
 /* Initialize the API client */
-function handleClientLoad () {
-  gapi.load('client', () => {
-    return gapi.client.init({
-      apiKey: API_KEY,
-      discoveryDocs: DISCOVERY_DOCS
-    })
-      .then(getUpcomingEvents)
+gapi.load('client', () => {
+  return gapi.client.init({
+    apiKey: API_KEY,
+    discoveryDocs: DISCOVERY_DOCS
   })
-}
+    .then(getUpcomingEvents)
+})
 
 /* Parse events to determine busy status */
 const parseEvents = (response) => {
@@ -52,8 +50,8 @@ const parseEvents = (response) => {
 
 /* Reset UI and refresh data */
 const refreshData = () => {
-  loader.classList.remove('hidden')
-  countdown.classList.add('hidden')
+  loaderElement.classList.remove('hidden')
+  countdownElement.classList.add('hidden')
   getUpcomingEvents()
 }
 
@@ -81,10 +79,10 @@ startCountdown()
 /* Update the UI with busy status */
 const setBusy = (isBusy, howLong) => {
   // Hide loader
-  loader.classList.add('hidden')
+  loaderElement.classList.add('hidden')
 
   // Show countdown
-  countdown.classList.remove('hidden')
+  countdownElement.classList.remove('hidden')
 
   yesElement.classList.toggle('hidden', !isBusy)
   noElement.classList.toggle('hidden', isBusy)
