@@ -1,49 +1,64 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var minifyCSS = require('gulp-minify-css');
-var concat = require('gulp-concat');
-var uncss = require('gulp-uncss');
-var critical = require('critical');
+const gulp = require('gulp');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+const htmlmin = require('gulp-htmlmin');
+const rename = require('gulp-rename');
+const postcss = require('gulp-postcss');
+const uncss = require('postcss-uncss');
 
-var homeCSS = ['css/normalize.css', 'css/skeleton.css', 'css/animations.css', 'css/home.css'];
-var homeCSSFileName = 'home.min.css';
-var homeCSSOutput = 'css/';
-var srcHTML = 'index.src.html';
-var outputHTML = 'index.html';
 
-gulp.task('default', ['css', 'critical']);
+const homeCSS = ['css/animations.css', 'css/home.css'];
+const homeCSSFileName = 'home.min.css';
+const homeCSSOutput = 'css/';
+const srcHTML = 'index.src.html';
+const outputHTML = 'index.html';
+
+gulp.task('default', ['css', 'html']);
 
 /**
  * Concatenate, minify, and remove unused rules from CSS
  * Input: css/*, index.src.html
  * Output: css/home.min.css
  */
-gulp.task('css', function () {
+gulp.task('css', () => {
+    const plugins = [
+        uncss({
+            html: srcHTML
+        })
+    ];
+
     return gulp.src(homeCSS)
         .pipe(concat(homeCSSFileName))
-        .pipe(minifyCSS({compatibility: 'ie9'}))
-        .pipe(uncss({html: [srcHTML]}))
+        .pipe(cleanCSS())
+        .pipe(postcss(plugins))
         .pipe(gulp.dest(homeCSSOutput));
 });
 
 /**
- * Inlines critical path CSS to improve page render time
- * Input: index.src.html, all CSS files referenced by index.src.html
+ * Minify HTML
+ * Input: index.src.html
  * Output: index.html
  */
-gulp.task('critical', function () {
-    critical.generate({
-        inline: true,
-        base: './',
-        src: srcHTML,
-        dest: outputHTML,
-        minify: true,
-        width: 320,
-        height: 480
-    });
-});
+gulp.task('html', () => {
+    return gulp.src(srcHTML)
+        .pipe(htmlmin({
+            removeComments: true,
+            collapseWhitespace: true,
+            collapseBooleanAttributes: true,
+            removeAttributeQuotes: true,
+            removeRedundantAttributes: true,
+            removeEmptyAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            removeOptionalTags: true,
+            minifyJS: true
+        }))
+        .pipe(rename('index.html'))
+        .pipe(gulp.dest('.'))
+  })
+  
 
-
-gulp.task('watch', function() {
-    gulp.watch(homeCSS, ['default']);
+gulp.task('watch', () => {
+    gulp.watch([homeCSS, srcHTML], ['default']);
 });
