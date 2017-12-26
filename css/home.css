@@ -1,15 +1,3 @@
-/* Oswald Light */
-@font-face {
-    font-family: 'Oswald';
-    src: url('/fonts/oswald-light-webfont.eot');
-    src: url('/fonts/oswald-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/oswald-light-webfont.woff2') format('woff2'),
-         url('/fonts/oswald-light-webfont.woff') format('woff'),
-         url('/fonts/oswald-light-webfont.ttf') format('truetype'),
-         url('/fonts/oswald-light-webfont.svg#Oswald') format('svg');
-    font-weight: 300;
-}
-
 /* Oswald Regular */
 @font-face {
     font-family: 'Oswald';
@@ -60,7 +48,6 @@ html {
 body {
   font-family: 'Georgia', serif;
   font-size: 180%;
-  font-weight: 300;
   margin: 0;
 }
 
