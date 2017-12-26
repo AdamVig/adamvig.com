@@ -176,11 +176,6 @@ figcaption h3 {
   main > section {
 		max-width: 95%;
   }
-
-  .portfolio figure {
-    flex-basis: 33.33333333%;
-    max-width: 33.33333333%;
-  }
 }
 
 /* 768px */
@@ -192,7 +187,12 @@ figcaption h3 {
   header > section,
   main > section {
     max-width: 90%;
-	}
+  }
+
+  .portfolio figure {
+    flex-basis: 33.33333333%;
+    max-width: 33.33333333%;
+  }
 }
 
 /* 992px */
