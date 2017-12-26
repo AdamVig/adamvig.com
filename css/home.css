@@ -153,6 +153,15 @@ figcaption h3 {
   margin-bottom: 0.5rem;
 }
 
+.portfolio img {
+  height: 50px;
+  width: 50px;
+}
+.portfolio img.screenshot {
+  height: 50px;
+  width: 88.75px;
+}
+
 /* 576px */
 @media (min-width: 36rem) {
   body {
@@ -179,6 +188,15 @@ figcaption h3 {
   .portfolio figure {
     flex-basis: 33.33333333%;
     max-width: 33.33333333%;
+  }
+
+  .portfolio img {
+    height: 100px;
+    width: 100px;
+  }
+  .portfolio img.screenshot {
+    height: 100px;
+    width: 177.5px;
   }
 }
 
