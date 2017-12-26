@@ -42,6 +42,7 @@ gulp.task('css', () => {
  */
 gulp.task('html', () => {
     return gulp.src(srcHTML)
+        .pipe(inlineSource())
         .pipe(htmlmin({
             removeComments: true,
             collapseWhitespace: true,
@@ -54,7 +55,6 @@ gulp.task('html', () => {
             removeOptionalTags: true,
             minifyJS: true
         }))
-        .pipe(inlineSource())
         .pipe(rename('index.html'))
         .pipe(gulp.dest('.'))
   })
