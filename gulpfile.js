@@ -6,7 +6,7 @@ const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const uncss = require('postcss-uncss');
-
+const inlineSource = require('gulp-inline-source');
 
 const homeCSS = ['css/animations.css', 'css/home.css'];
 const homeCSSFileName = 'home.min.css';
@@ -54,10 +54,10 @@ gulp.task('html', () => {
             removeOptionalTags: true,
             minifyJS: true
         }))
+        .pipe(inlineSource())
         .pipe(rename('index.html'))
         .pipe(gulp.dest('.'))
   })
-  
 
 gulp.task('watch', () => {
     gulp.watch([homeCSS, srcHTML], ['default']);
