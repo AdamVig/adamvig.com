@@ -12,7 +12,7 @@
     "gulp": "~3.9.0",
     "gulp-clean-css": "3.9.0",
     "gulp-concat": "~2.6.0",
-    "gulp-htmlmin": "4.0.0",
+    "gulp-htmlmin": "5.0.1",
     "gulp-inline-source": "3.1.0",
     "gulp-postcss": "7.0.0",
     "gulp-rename": "1.2.2",
