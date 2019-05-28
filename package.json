@@ -9,23 +9,22 @@
     "trianglify": "~1.2.0"
   },
   "devDependencies": {
-    "gulp": "~3.9.0",
-    "gulp-clean-css": "3.9.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "~2.6.0",
-    "gulp-htmlmin": "4.0.0",
-    "gulp-inline-source": "3.1.0",
-    "gulp-postcss": "7.0.0",
-    "gulp-rename": "1.2.2",
-    "gulp-uglify": "~3.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
     "npm-run-all": "4.1.2",
     "postcss-uncss": "0.16.1",
     "serve": "^11.0.0",
-    "uncss": "0.16.1"
+    "uncss": "^0.16.2"
   },
   "scripts": {
-    "build": "gulp",
+    "build": "gulp build",
     "serve": "serve -s .",
-    "watch": "gulp watch",
+    "watch": "gulp",
     "start": "npm-run-all --parallel serve watch"
   },
   "repository": {

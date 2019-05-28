@@ -1,5 +1,4 @@
-const gulp = require('gulp');
-const uglify = require('gulp-uglify');
+const {dest, series, src, watch} = require('gulp');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
@@ -14,26 +13,24 @@ const homeCSSOutput = 'css/';
 const srcHTML = 'index.src.html';
 const outputHTML = 'index.html';
 
-gulp.task('default', ['html-pre', 'css', 'html-post']);
-
 /**
  * Concatenate, minify, and remove unused rules from CSS
  * Input: css/*, index.src.html
  * Output: css/home.min.css
  */
-gulp.task('css', ['html-pre'], () => {
+function css() {
     const plugins = [
         uncss({
             html: outputHTML
         })
     ];
 
-    return gulp.src(homeCSS)
+    return src(homeCSS)
         .pipe(concat(homeCSSFileName))
         .pipe(cleanCSS())
         .pipe(postcss(plugins))
-        .pipe(gulp.dest(homeCSSOutput));
-});
+        .pipe(dest(homeCSSOutput));
+};
 
 /**
  * Minify HTML and inline assets
@@ -43,8 +40,8 @@ gulp.task('css', ['html-pre'], () => {
  * Input: index.src.html
  * Output: index.html
  */
-const htmlTask = () => {
-    return gulp.src(srcHTML)
+function html() {
+    return src(srcHTML)
         .pipe(inlineSource())
         .pipe(htmlmin({
             removeComments: true,
@@ -59,12 +56,8 @@ const htmlTask = () => {
             minifyJS: true
         }))
         .pipe(rename('index.html'))
-        .pipe(gulp.dest('.'))
+        .pipe(dest('.'));
 };
 
-gulp.task('html-pre', htmlTask);
-gulp.task('html-post', ['css'], htmlTask)
-
-gulp.task('watch', () => {
-    gulp.watch([homeCSS, srcHTML], ['default']);
-});
+exports.build = series(html, css, html);
+exports.default = () => watch([...homeCSS, srcHTML], series(html, css, html));
