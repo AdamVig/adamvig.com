@@ -19,7 +19,7 @@
     "gulp-uglify": "~3.0.0",
     "npm-run-all": "4.1.2",
     "postcss-uncss": "0.16.1",
-    "serve": "~6.4.3",
+    "serve": "~11.0.0",
     "uncss": "0.16.1"
   },
   "scripts": {
