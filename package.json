@@ -6,7 +6,7 @@
   "private": true,
   "license": "NONE",
   "dependencies": {
-    "trianglify": "^2.0.0"
+    "trianglify": "^3.0.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
