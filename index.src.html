@@ -24,125 +24,38 @@
     <meta property="og:url" content=" https://adamvig.com">
     <meta property="og:image" content=" https://adamvig.com/img/favicon-250.png">
 
-    <link rel="stylesheet" href="/css/home.min.css" inline>
+    <style>
+      main {
+        font-size: calc(16px + 2.3vw);
+        font-family: serif;
+        max-width: 70ch;
+        padding: 1ch;
+        margin: auto;
+      }
+      img {
+        height: calc(15vmin);
+        width: calc(15vmin);
+      }
+      @media (min-width: 350) {
+        main {
+          font-size: calc(20px + 2.3vw);
+          padding: 2ch;
+        }
+      }
+      @media (min-width: 475px) {
+        main {
+          font-size: calc(24px + 2vw);
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <section>
-        <img class="icon" src="img/home/adamvig-icon-red.svg" alt="Adam Vigneaux icon" height="50" width="50" inline />
-        <h1>Adam Vigneaux</h1>
-      </section>
-    </header>
     <main>
-      <section class="links">
-        <ul>
-          <li>
-            <a href="https://github.com/adamvig"><button>github</button></a>
-          </li>
-          <li>
-            <a href="https://vimeo.com/adamvig"><button>vimeo</button></a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/adamvigneaux"><button>linkedin</button></a>
-          </li>
-          <li>
-            <a href="mailto:adam@adamvig.com"><button>email</button></a>
-          </li>
-        </ul>
-      </section>
-      <section class="portfolio">
-        <section>
-          <h2>Projects</h2>
-          <section>
-            <figure>
-              <a href="https://github.com/stockpile-co/api" aria-label="Go to the Stockpile API code">
-                <img src="img/home/stockpile-tipi.svg" alt="Stockpile logo" height="50" width="50" inline />
-              </a>
-              <figcaption>
-                <a href="https://github.com/stockpile-co/api">
-                  <h3>Stockpile</h3>
-                </a>
-                <p>
-                  An inventory management app targeted at small to medium film studios, built as a senior project. I built the RESTful API in Node.js with the Restify framework. I also designed the schema for and managed the MySQL database.
-                </p>
-              </figcaption>
-            </figure>
-            <figure>
-              <a href="https://github.com/AdamVig/goco-student" aria-label="Go to the GoCo Student code">
-                <img src="img/home/goco-student-icon.svg" alt="GoCo Student Icon" height="50" width="50" inline />
-              </a>
-              <figcaption>
-                <a href="https://github.com/AdamVig/goco-student">
-                  <h3>GoCo Student</h3>
-                </a>
-                <p>
-                  An app once used by eighty-three percent of Gordon College students (about 1,400), GoCo provided fast access to student data, circumventing school websites. I built the app with the Ionic Framework and <a href="https://github.com/AdamVig/GoCoApi">the backend</a> with Node.js.
-                </p>
-              </figcaption>
-            </figure>
-            <figure>
-              <a href="https://github.com/AdamVig/SchedU-php" aria-label="Go to the SchedU code">
-                <img src="img/home/schedu-icon.svg" alt="SchedU Icon" height="50" width="50" inline />
-              </a>
-              <figcaption>
-                <a href="https://github.com/AdamVig/SchedU-php">
-                  <h3>SchedU</h3>
-                </a>
-                <p>
-                  A service that texted five hundred students at Nashoba Regional High School their class schedule every morning. SchedU was a PHP script that used the Google Calendar API to get the schedule and Twilio to send text messages.
-                </p>
-              </figcaption>
-            </figure>
-          </section>
-        </section>
-        <section>
-          <h2>Films</h2>
-          <section>
-            <figure>
-              <a href="https://youtu.be/-RFMyOe-NuU" aria-label="Watch the Brian Gordon documentary on YouTube">
-                <img src="img/home/brian-gordon.jpg" alt="Brian Gordon screenshot" class="screenshot" height="50" width="28.167" /> 
-              </a>
-              <figcaption>
-                <a href="https://youtu.be/-RFMyOe-NuU">
-                  <h3>Brian Gordon</h3>
-                </a>
-                <p>
-                  A documentary about a custodian at my college. I befriended Brian over the years, and after learning enough about his story, I decided to produce a film about him for an independent study. Producing this film helped me learn the nuances of telling a story.
-                </p>
-              </figcaption>
-            </figure>
-            <figure>
-              <a href="https://www.youtube.com/channel/UCHnRxZO4PEVpCf0pnrHOY_A" aria-label="Watch Barrington Sessions on YouTube">
-                <img src="img/home/barrington-sessions-logo.svg" alt="Barrington Sessions logo" height="50" width="50" inline />
-              </a>
-              <figcaption>
-                <a href="https://www.youtube.com/channel/UCHnRxZO4PEVpCf0pnrHOY_A">
-                  <h3>Barrington Sessions</h3>
-                </a>
-                <p>
-                  <blockquote>
-                    Every place has a music scene, you just have to look for it.
-                  </blockquote>
-                  I shot, recorded, and edited most of the sessions alone and with whichever cameras I could get access to. The project's goal was to highlight budding musicians in a unique way.
-                </p>
-              </figcaption>
-            </figure>
-            <figure>
-              <a href="https://vimeo.com/206442642" aria-label="Watch Why Gordon on Vimeo">
-                <img src="img/home/why-gordon.jpg" alt="Why Gordon logo" class="screenshot" height="50" width="28.167" />
-              </a>
-              <figcaption>
-                <a href="https://vimeo.com/206442642">
-                  <h3>Why Gordon?</h3>
-                </a>
-                <p>
-                  A documentary that attempts to tell the story of why students come to Gordon College. This film was inspired by my anecdotal experience that most of my friends came to Gordon as a backup plan, and only stayed because of the people, not because of the school.
-                </p>
-              </figcaption>
-            </figure>
-          </section>
-        </section>
-      </section>
+      <img class="icon" src="img/home/adamvig-icon-red.svg" alt="Adam Vigneaux icon" height="100" width="100" />
+      <h1>Adam Vigneaux</h1>
+      <p>Email me at <a href="mailto:adam@adamvig.com">adam@adamvig.com</a>.</p>
+      <p>Read my code on <a href="https://github.com/AdamVig">GitHub</a>.</p>
+      <p>Do whatever it is you do on <a href="https://linkedin.com/in/adamvigneaux">LinkedIn</a>.</p>
     </main>
   </body>
 </html>
