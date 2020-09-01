@@ -8,7 +8,7 @@ function makePattern() {
         height: window.innerHeight,
         width: window.innerWidth
     };
-    const newPattern = Trianglify(config).canvas();
+    const newPattern = trianglify(config).toCanvas();
     newPattern.id = patternID;
     newPattern.style.zIndex = 0;
     const oldPattern = document.getElementById(patternID);
