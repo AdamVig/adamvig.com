@@ -1,0 +1,28 @@
+/*
+Stylesheet for use with org-mode HTML export.
+To use, include the following lines at the top of your org file:
+#+OPTIONS: html-style:nil
+#+OPTIONS: num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://adamvig.com/css/adamvig-org-mode-theme.css">
+
+The first line disables the default styling. The second line disables section numbers in headlines. The third line links to this stylesheet.
+*/
+
+body {
+    font-family: serif;
+    max-width: 70ch;
+    padding: 1ch;
+    margin: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+img {
+    height: calc(15vmin);
+    width: calc(15vmin);
+}
+@media (min-width: 350px) {
+    body {
+        padding: 2ch;
+    }
+}
