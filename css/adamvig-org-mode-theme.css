@@ -26,3 +26,21 @@ img {
         padding: 2ch;
     }
 }
+.section-number-1,
+.section-number-2,
+.section-number-3,
+.section-number-4,
+.section-number-5,
+.section-number-6,
+.section-number-7,
+.section-number-8,
+.section-number-9,
+.section-number-10,
+.section-number-11,
+.section-number-12,
+.section-number-13,
+.section-number-14,
+.section-number-15,
+.section-number-16 {
+  display: none;
+}
