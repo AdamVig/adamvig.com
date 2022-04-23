@@ -26,7 +26,7 @@
 
     <style>
       main {
-        font-size: calc(16px + 2.3vw);
+        font-size: clamp(1.25rem, 2.5vw, 3rem);
         font-family: serif;
         max-width: 70ch;
         padding: 1ch;
@@ -36,15 +36,10 @@
         height: calc(15vmin);
         width: calc(15vmin);
       }
-      @media (min-width: 350) {
+      @media (min-width: 350px) {
         main {
-          font-size: calc(20px + 2.3vw);
+          font-size: clamp(1.25rem, 1.25rem + 2.3vw, 2.75rem);
           padding: 2ch;
-        }
-      }
-      @media (min-width: 475px) {
-        main {
-          font-size: calc(24px + 2vw);
         }
       }
     </style>
@@ -55,7 +50,7 @@
       <h1>Adam Vigneaux</h1>
       <p>Email me at <a href="mailto:adam@adamvig.com">adam@adamvig.com</a>.</p>
       <p>Read my code on <a href="https://github.com/AdamVig">GitHub</a>.</p>
-      <p>Do whatever it is you do on <a href="https://linkedin.com/in/adamvigneaux">LinkedIn</a>.</p>
+      <p>“Add me to your professional network” on <a href="https://linkedin.com/in/adamvigneaux">LinkedIn</a>.</p>
     </main>
   </body>
 </html>
