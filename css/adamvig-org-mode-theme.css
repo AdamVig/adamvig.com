@@ -11,7 +11,7 @@ The first line disables the default styling. The second line disables section nu
 body {
     font-family: serif;
     font-size: 120%;
-    max-width: 70ch;
+    max-width: 80ch;
     padding: 1ch;
     margin: auto;
 }
@@ -55,4 +55,12 @@ td, th {
   border-right: 1px solid #ccc;
   padding: 4px 8px;
 }
-
+ul, ol {
+  padding-left: 20px;
+}
+@media print {
+  body {
+    max-width: initial;
+    padding: 2em 4em;
+  }
+}
